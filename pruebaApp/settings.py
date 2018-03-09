@@ -25,7 +25,7 @@ SECRET_KEY = 'vcka98(rim(o-j(nfm)0d(4y&h_8t16*q$eb06ls@@hqpiqq-t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
