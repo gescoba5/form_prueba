@@ -1,0 +1,10 @@
+{% extends 'sst/base.html' %}
+
+{% block content %}
+  <!-- Este era post_edit.html-->
+  <h1>Nuevo Post</h1>
+  <form method="POST" class="post-form">{% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="save btn btn-default">Guardar</button>
+  </form>
+{% endblock %}

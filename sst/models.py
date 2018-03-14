@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# coding=utf-8
 from __future__ import unicode_literals
 
 from django.db import models
@@ -6,8 +6,8 @@ from django.utils import timezone
 
 class Post(models.Model):
   author       = models.ForeignKey('auth.User', on_delete = models.CASCADE) # Clave foranea, vinculo a otro modelo
-  title        = models.CharField(max_length = 200)  # Define un texto con un número limitado de caracteres
-  text         = models.TextField() # Define textos largos sin ĺimites
+  title        = models.CharField(max_length = 200, verbose_name = "Título")  # Define un texto con un número limitado de caracteres
+  text         = models.TextField(verbose_name = "Texto") # Define textos largos sin ĺimites
   created_date = models.DateTimeField(
     default = timezone.now)
   published_date = models.DateTimeField(
